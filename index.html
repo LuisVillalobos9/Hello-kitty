@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de Hello Kitty</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Quiz Oficial de Hello Kitty</h1>
+            <p>Mi vida, mi cielo, mi KittyLover <span id="user-name"></span> !Demuestra cuánto sabes sobre tu personaje favorito!</p>      
+        </div>
+
+        <!-- Sección inicial para ingresar nombre -->
+        <div id="start-screen" class="start-screen">
+            <div class="image-container">
+                <img src="/hello_kitty/imagenes/imagen1.jpg" alt="Hello Kitty">
+                <p>Bienvenida mi cielito a un juego creado por tu servidor Luis, para medir que tanto le sabes a la Kitty</p>
+            </div>
+            <div class="name-input">
+                <label for="player-name">Ingresa tu hermoso nombre para el certificado:</label>
+                <input type="text" id="player-name" placeholder="Tu nombre aquí" required>
+                <button id="start-button">¡Comenzar Quiz!</button>            
+            </div>
+        </div>
+
+
+        <!-- Contenedor del quiz (se muestra después de ingresar el nombre) -->
+        <div id="quiz-section" class="hidden">
+            <div class="image-container">
+                <img src="/hello_kitty/imagenes/imagen2.jpg" alt="Hello Kitty Quiz">
+            </div>
+
+            <div id="quiz-container"></div>
+
+            <button id="next-button">Siguiente Pregunta</button>
+        </div>
+
+        <!-- Sección de resultados -->
+         <div class="results hidden" id="results">
+            <div class="score" id="score"></div>
+            <div class="feedback" id="feedback"></div>
+            <div class="certificate" id="certificate">
+                <h2>Certificado para la Fan #1 de Hello Kitty</h2>
+                <p><span id="user-name">Fan #1 de Hello Kitty</span></p>
+                <p id="certification-level"></p>
+                <p>Por tu cariño excepcional a la Gatita Hello Kitty 🤍</p>
+                <p class="date">Fecha: <span id="certificate-date"></span></p>
+                <img src="/hello_kitty/imagenes/firma_kitty.jpg" alt="Firma de Hello Kitty">
+            </div>
+            <div class="buttons-container">
+                <button id="download-button">Descargar Certificado</button>
+                <button id="restart-button">¡Juega de Nuevo!</button>
+            </div>
+         </div> 
+    </div>
+
+    <!-- Librería html2canvas para hacer la captura del certificado -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
